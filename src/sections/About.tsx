@@ -9,7 +9,7 @@ import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
-import mapImage from "@/assets/images/map.png";
+import mapImage from "@/assets/images/homeMap.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
@@ -91,7 +91,7 @@ const hobbies = [
 export const AboutSection = () => {
   const constraintRef = useRef(null);
   return (
-    <div className="py-20 lg:py-28">
+    <div className="py-20 lg:py-28" id="about">
       <div className="container">
         <SectionHeader
           eyebrow="About Me"
@@ -106,7 +106,9 @@ export const AboutSection = () => {
                 description="Explore the books shaping my perspectives."
               />
               <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={bookImage} alt="Book Cover" />
+                <a href="https://www.goodreads.com/user/show/187329051-jake-moccia" target="_blank">
+                  <Image src={bookImage} alt="Book Cover" />
+                </a>
               </div>
             </Card>
             <Card className="h-[320px]  md:col-span-3 lg:col-span-2">
@@ -139,7 +141,7 @@ export const AboutSection = () => {
                 {hobbies.map((hobby) => (
                   <motion.div
                     key={hobby.title}
-                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute cursor-pointer"
                     style={{ left: hobby.left, top: hobby.top }}
                     drag
                     dragConstraints={constraintRef}

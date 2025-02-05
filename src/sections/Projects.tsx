@@ -1,55 +1,54 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import AppleWebsiteLandingPage from "@/assets/images/AppleWebsite.png";
+import MoviePosterWebsite from "@/assets/images/MoviePosterWebsite.png";
+import XoraLandingPage from "@/assets/images/XoraLandingPage.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Apple",
+    year: "2024",
+    title: "Apple Clone Landing Page",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Sleek, modern design for a seamless user experience." },
+      { title: "Optimized for fast performance across all devices." },
+      { title: "Responsive layout ensures smooth navigation on mobile." },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://apple-clone-website-rho.vercel.app/",
+    image: AppleWebsiteLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Xora",
+    year: "2024",
+    title: "Xora Landing Page Clone",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Clean & visually appealing design with a focus on clear, intuitive navigation." },
+      { title: "Smooth & responsive user interface that adapts effortlessly to all screen sizes." },
+      { title: "Interactive elements and animations that enhance engagement." },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://xora-clone-landing-page.vercel.app/",
+    image: XoraLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Personal",
+    year: "2024",
+    title: "Movie Poster Ecommerce Website",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Visually striking movie posters with vibrant, high-quality imagery." },
+      { title: "Intuitive layout for easy browsing and quick access to movie details." },
+      { title: "Responsive design with optimal viewing experience across all devices." },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://movie-poster-project.vercel.app/",
+    image: MoviePosterWebsite,
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id="projects">
       <div className="container">
         <SectionHeader
           eyebrow="Real-World Results"
@@ -60,7 +59,8 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, projectIndex) => (
             <Card
               key={project.title}
-              className="20 px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky" style={{top: `calc(64px + ${projectIndex * 40}px`}}
+              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              style={{ top: `calc(64px + ${projectIndex * 40}px)` }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
@@ -82,8 +82,13 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 transform transition duration-200 ease-in-out hover:scale-105 hover:shadow-xl active:scale-95">
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
@@ -93,7 +98,7 @@ export const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-2xl border-2 border-white/20"
                   />
                 </div>
               </div>

@@ -31,6 +31,8 @@ const config: Config = {
         "ping-large": "ping-large 1s ease-in-out infinite",
         "move-left": "move-left 1s linear infinite",
         "move-right": "move-right 1s linear infinite",
+        "wave": "wave 1s ease-in-out infinite",
+        "slide": "slide 30s infinite linear",
       },
 
       keyframes: {
@@ -55,6 +57,20 @@ const config: Config = {
           "100%": {
             transform: "translateX(0%)",
           },
+        },
+        "wave": {
+          '0%': { transform: 'rotate(0deg)' },
+          '20%': { transform: 'rotate(-6deg)' }, 
+          '40%': { transform: 'rotate(0deg)' },
+          '60%': { transform: 'rotate(6deg)' }, 
+          '80%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
+        "slide": {
+          '0%': { transform: 'translateX(0)'},
+          '33%': { transform: 'translateX(-100%)'},
+          '66%': { transform: 'translateX(-200%)'},
+          '100%': { transform: 'translateX(0)'},
         },
       },
     },
