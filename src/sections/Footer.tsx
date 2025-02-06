@@ -3,7 +3,7 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 const footerLinks = [
   {
     title: "Resume",
-    href: "/Resume.pdf",
+    href: "/Resume_v2.pdf",
   },
   {
     title: "Github",
