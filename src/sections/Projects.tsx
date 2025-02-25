@@ -1,6 +1,6 @@
 import AppleWebsiteLandingPage from "@/assets/images/AppleWebsite.png";
 import MoviePosterWebsite from "@/assets/images/MoviePosterWebsite.png";
-import XoraLandingPage from "@/assets/images/XoraLandingPage.png";
+import Zentry from "@/assets/images/Zentry.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -21,16 +21,16 @@ const portfolioProjects = [
     image: AppleWebsiteLandingPage,
   },
   {
-    company: "Xora",
+    company: "Zentry",
     year: "2024",
-    title: "Xora Landing Page Clone",
+    title: "Zentry Landing Page Clone",
     results: [
       { title: "Clean & visually appealing design with a focus on clear, intuitive navigation." },
       { title: "Smooth & responsive user interface that adapts effortlessly to all screen sizes." },
       { title: "Interactive elements and animations that enhance engagement." },
     ],
-    link: "https://xora-clone-landing-page.vercel.app/",
-    image: XoraLandingPage,
+    link: "https://zentry-clone-landing-page.vercel.app/",
+    image: Zentry,
   },
   {
     company: "Personal",
